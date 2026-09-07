@@ -1,1 +1,246 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+
+  background:
+    radial-gradient(circle at top left, #12396b, transparent 35%),
+    radial-gradient(circle at bottom right, #240b4e, transparent 35%),
+    #030817;
+}
+
+.container {
+  width: 95%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.egg {
+  font-size: 80px;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 45px;
+  color: #00aaff;
+}
+
+header p {
+  color: #8ebeff;
+  margin-top: 8px;
+}
+
+.game-status {
+  padding: 20px 30px;
+  border: 1px solid #1262a8;
+  border-radius: 20px;
+  background: rgba(10, 25, 50, .8);
+  min-width: 280px;
+}
+
+.game-status b {
+  display: block;
+  font-size: 22px;
+}
+
+.game-status span {
+  color: #91bdf0;
+}
+
+.game-status strong {
+  display: block;
+  margin-top: 10px;
+  color: #00ffae;
+}
+
+
+/* PLAYER */
+
+.player {
+  background: rgba(8, 19, 38, .92);
+  border: 1px solid #214a78;
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14, 35, 67, .95),
+      rgba(3, 10, 25, .95)
+    );
+
+  border: 1px solid #1472bb;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #a9c9ef;
+}
+
+.card .value {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #00cfff;
+}
+
+
+/* CONTENT */
+
+.content {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.panel {
+  background: rgba(7, 19, 38, .95);
+  border: 1px solid #214a78;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.panel h2 {
+  font-size: 25px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+
+/* BEST PET */
+
+.best-pet {
+  border: 2px solid #ffd52f;
+  border-radius: 20px;
+  padding: 30px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(102, 36, 180, .35),
+      transparent 65%
+    );
+}
+
+.best-pet h1 {
+  font-size: 35px;
+}
+
+.best-pet .income {
+  color: #ffd52f;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
+/* PET TABLE */
+
+.pet {
+  display: grid;
+  grid-template-columns: 40px 1fr 120px;
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: 15px;
+  background: rgba(13, 31, 55, .9);
+
+  margin-bottom: 10px;
+}
+
+.pet-name {
+  font-weight: bold;
+}
+
+.rarity {
+  color: #72b9ff;
+}
+
+.pet-income {
+  text-align: right;
+  color: #65c9ff;
+  font-weight: bold;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media(max-width: 550px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .egg {
+    font-size: 50px;
+  }
+
+      }
